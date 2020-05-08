@@ -175,8 +175,8 @@ function install_nginx() {
     local __key="$__certs_path/dev.key"
     self_signed_cert "$__cert" "$__key"
   elif [[ "$__mode" = "prod" ]]; then
-    local __cert="$__certs_path/fbctf.crt"
-    local __key="$__certs_path/fbctf.key"
+    local __cert="$__certs_path/dev.crt"
+    local __key="$__certs_path/dev.key"
     case "$__certs" in
       self)
         self_signed_cert "$__cert" "$__key"
