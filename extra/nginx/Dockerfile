@@ -8,10 +8,11 @@ ARG MODE=dev
 ARG TYPE=self
 ARG KEY
 ARG CRT
+ARG HHVM=hhvm
 
 WORKDIR $HOME
 COPY . $HOME
 
 RUN apt-get update && apt-get -y install sudo apt-utils
-RUN ./extra/provision.sh -m $MODE -c $TYPE -k $KEY -C $CRT -D $DOMAIN -e $EMAIL -s `pwd` --docker --multiple-servers --server-type nginx --hhvm-server hhvm
+RUN ./extra/provision.sh -m $MODE -c $TYPE -k $KEY -C $CRT -D $DOMAIN -e $EMAIL -s `pwd` --docker --multiple-servers --server-type nginx --hhvm-server $HHVM
 CMD ["./extra/nginx/nginx_startup.sh"]

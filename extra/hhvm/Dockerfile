@@ -8,6 +8,8 @@ ARG MODE=dev
 ARG TYPE=self
 ARG KEY
 ARG CRT
+ARG MYSQL=mysql
+ARG CACHE=cache
 
 ENV HHVM_DISABLE_NUMA true
 
@@ -15,5 +17,5 @@ WORKDIR $HOME
 COPY . $HOME
 
 RUN apt-get update && apt-get -y install sudo apt-utils
-RUN ./extra/provision.sh -m $MODE -c $TYPE -k $KEY -C $CRT -D $DOMAIN -e $EMAIL -s `pwd` --docker --multiple-servers --server-type hhvm --mysql-server mysql --cache-server cache
+RUN ./extra/provision.sh -m $MODE -c $TYPE -k $KEY -C $CRT -D $DOMAIN -e $EMAIL -s `pwd` --docker --multiple-servers --server-type hhvm --mysql-server $MYSQL --cache-server $CACHE
 CMD ["./extra/hhvm/hhvm_startup.sh"]
