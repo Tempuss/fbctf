@@ -24,7 +24,7 @@ The FBCTF platform was designed with flexibility in mind, allowing for different
 
 The [Quick Setup Guide](https://github.com/facebook/fbctf/wiki/Quick-Setup-Guide) details the quick setup mode which provides a streamlined and consistent build of the platform but offers less flexibility when compared to a custom installation. If you would prefer to perform a custom installation, please see the [Development Installation Guide](https://github.com/facebook/fbctf/wiki/Installation-Guide,-Development) or [Production Installation Guide](https://github.com/facebook/fbctf/wiki/Installation-Guide,-Production).
 
-# Quick Setup Guide - One container per machine
+## Quick Setup Guide - One container per machine
 
 To give more flexibility and decrease machine load, we decide to split the containers and use machines smaller to manage one container per machine.
 We create a bash script to do a fast implementation and upload the images with the parameters that we need to later run the containers on each machine.
