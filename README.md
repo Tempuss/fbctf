@@ -33,6 +33,8 @@ We need to do a docker login to upload the images in our repositories, to execut
 - ``docker login``
 - ``./build-images.sh -c [CACHE_SERVER_IP] -m [MYSQL_SERVER_IP] -s [HHVM_SERVER_IP] -r [USER_REPOSITORY]``
 
+Later we could go to each machine and run the containers.
+
 
 ## Reporting an Issue
 
