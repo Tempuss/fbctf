@@ -26,9 +26,10 @@ The [Quick Setup Guide](https://github.com/facebook/fbctf/wiki/Quick-Setup-Guide
 
 # Quick Setup Guide - One container per machine
 
-In order to give more flexibility and decrease the load in the machine, we decide as well split the containers and use machines smallest machines to manage one container per machine.
-We create a bash script to do a fast implementation and upload the images with the parameters that we need in order to later run the containers on each machine.
+To give more flexibility and decrease machine load, we decide to split the containers and use machines smaller to manage one container per machine.
+We create a bash script to do a fast implementation and upload the images with the parameters that we need to later run the containers on each machine.
 We need to do a docker login to upload the images in our repositories, to execute the script with the requested parameters:
+
 - ``docker login``
 - ``./build-images.sh -c [CACHE_SERVER_IP] -m [MYSQL_SERVER_IP] -s [HHVM_SERVER_IP] -r [USER_REPOSITORY]``
 
