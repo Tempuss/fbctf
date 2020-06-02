@@ -28,12 +28,9 @@ The [Quick Setup Guide](https://github.com/facebook/fbctf/wiki/Quick-Setup-Guide
 
 In order to give more flexibility and decrease the load in the machine, we decide as well split the containers and use machines smallest machines to manage one container per machine.
 We create a bash script to do a fast implementation and upload the images with the parameters that we need in order to later run the containers on each machine.
-1. We need to do a docker login to upload the images in our repositories.
-``docker login``
-2. We're going to execute the script with the requested parameters.
+We need to do a docker login to upload the images in our repositories, to execute the script with the requested parameters:
+- ``docker login``
 - ``./build-images.sh -c [CACHE_SERVER_IP] -m [MYSQL_SERVER_IP] -s [HHVM_SERVER_IP] -r [USER_REPOSITORY]``
-3. If you have some doubts about that you can type the following command.
-``./build-images.sh --help``
 
 
 ## Reporting an Issue
