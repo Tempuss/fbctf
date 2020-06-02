@@ -31,7 +31,7 @@ We create a bash script to do a fast implementation and upload the images with t
 1. We need to do a docker login to upload the images in our repositories.
 ``docker login``
 2. We're going to execute the script with the requested parameters.
-``./build-images.sh -c [CACHE_SERVER_IP] -m [MYSQL_SERVER_IP] -s [HHVM_SERVER_IP] -r [USER_REPOSITORY]``
+- ``./build-images.sh -c [CACHE_SERVER_IP] -m [MYSQL_SERVER_IP] -s [HHVM_SERVER_IP] -r [USER_REPOSITORY]``
 3. If you have some doubts about that you can type the following command.
 ``./build-images.sh --help``
 
