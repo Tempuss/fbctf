@@ -35,7 +35,6 @@ We need to do a docker login to upload the images in our repositories, to execut
 
 Later we could go to each machine and run the containers.
 
-
 ## Reporting an Issue
 
 First, ensure the issue was not already reported by doing a search. If you cannot find an existing issue, create a new issue. Make the title and description as clear as possible, and include a test case or screenshot to reproduce or illustrate the problem if possible.
