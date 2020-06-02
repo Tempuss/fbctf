@@ -24,6 +24,17 @@ The FBCTF platform was designed with flexibility in mind, allowing for different
 
 The [Quick Setup Guide](https://github.com/facebook/fbctf/wiki/Quick-Setup-Guide) details the quick setup mode which provides a streamlined and consistent build of the platform but offers less flexibility when compared to a custom installation. If you would prefer to perform a custom installation, please see the [Development Installation Guide](https://github.com/facebook/fbctf/wiki/Installation-Guide,-Development) or [Production Installation Guide](https://github.com/facebook/fbctf/wiki/Installation-Guide,-Production).
 
+## Quick Setup Guide - One container per machine
+
+To give more flexibility and decrease machine load, we decide to split the containers and use machines smaller to manage one container per machine.
+We create a bash script to do a fast implementation and upload the images with the parameters that we need to later run the containers on each machine.
+We need to do a docker login to upload the images in our repositories, to execute the script with the requested parameters:
+
+- ``docker login``
+- ``./build-images.sh -c [CACHE_SERVER_IP] -m [MYSQL_SERVER_IP] -s [HHVM_SERVER_IP] -r [USER_REPOSITORY]``
+
+Later we could go to each machine and run the containers.
+
 ## Reporting an Issue
 
 First, ensure the issue was not already reported by doing a search. If you cannot find an existing issue, create a new issue. Make the title and description as clear as possible, and include a test case or screenshot to reproduce or illustrate the problem if possible.
