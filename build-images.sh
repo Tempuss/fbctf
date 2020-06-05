@@ -42,9 +42,9 @@ for NAME in "${SERVICE_NAME[@]}"; do
   if [[ "$NAME" != "cache|mysql" ]]; then
     docker build -f extra/$NAME/Dockerfile . -t $REPO/fbctf_$NAME
   elif [[ "$NAME" = "nginx" ]]; then
-    docker build -f extra/$NAME/Dockerfile . -t $REPO/fbctf_$NAME --build-arg HHVM=$HHVM
+    docker build -f extra/$NAME/Dockerfile . -t $REPO/fbctf_$NAME
   else
-    docker build -f extra/$NAME/Dockerfile . -t $REPO/fbctf_$NAME --build-arg MYSQL=$MYSQL --build-arg CACHE=$CACHE
+    docker build -f extra/$NAME/Dockerfile . -t $REPO/fbctf_$NAME
   fi
   docker push $REPO/fbctf_$NAME:latest
 done
