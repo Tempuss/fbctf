@@ -17,7 +17,7 @@
     "grunt-eslint": "^18.1.0",
     "grunt-force-task": "^2.0.0",
     "grunt-run": "^0.6.0",
-    "grunt-sass": "~1.2.0"
+    "grunt-sass": "~2.0.0"
   },
   "dependencies": {
     "d3": "^3.5.16",

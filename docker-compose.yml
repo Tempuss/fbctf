@@ -1,4 +1,4 @@
-version: '2'
+version: "3.3"
 services:
   mysql:
     restart: always
@@ -9,8 +9,8 @@ services:
       #  MODE: prod
     environment:
       MYSQL_ROOT_PASSWORD: root
-    expose:
-      - "3306"
+    ports:
+      - 3306:3306
 
   cache:
     restart: always
@@ -19,8 +19,8 @@ services:
       dockerfile: extra/cache/Dockerfile
       #args:
       #  MODE: prod
-    expose:
-      - "11211"
+    ports:
+      - 11211
 
   hhvm:
     restart: always
@@ -32,8 +32,8 @@ services:
     depends_on:
       - mysql
       - cache
-    expose:
-      - "9000"
+    ports:
+      - 9000
 
   nginx:
     restart: always
@@ -45,5 +45,5 @@ services:
     depends_on:
       - hhvm
     ports:
-      - "80:80"
-      - "443:443"
+      - 80:80
+      - 443:443

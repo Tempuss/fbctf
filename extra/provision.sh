@@ -293,6 +293,7 @@ fi
             package build-essential
             package libssl-dev
             package python-all-dev
+            package python-dev
             package python-setuptools
             package python-pip
             log "Upgrading pip"

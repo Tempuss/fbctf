@@ -17,3 +17,7 @@ COPY . $HOME
 RUN apt-get update && apt-get -y install sudo apt-utils
 RUN ./extra/provision.sh -m $MODE -c $TYPE -k $KEY -C $CRT -D $DOMAIN -e $EMAIL -s `pwd` --docker
 CMD ["./extra/service_startup.sh"]
+
+EXPOSE 80
+EXPOSE 443
+EXPOSE 3306
