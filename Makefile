@@ -1,5 +1,5 @@
 build:
-	docker-compose stop;docker-compose build --no-cache
+	docker-compose stop;docker-compose build
 
 up:
 	docker-compose up -d
@@ -20,10 +20,10 @@ shell-web:
 	docker exec -ti fbctf_hhvm_1 /bin/sh
 
 shell-db:
-	docker exec -ti mysql8 /bin/sh
+	docker exec -ti fbctf_mysql_1 /bin/sh
 
 log-web:
-	docker-compose logs web
+	docker-compose logs fbctf_hhvm_1
 
 log-db:
-	docker-compose logs db
+	docker-compose logs fbctf_mysql_1

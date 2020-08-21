@@ -5,8 +5,8 @@ services:
     build:
       context: .
       dockerfile: extra/mysql/Dockerfile
-      #args:
-      #  MODE: prod
+      args:
+        MODE: prod
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports:
@@ -17,8 +17,8 @@ services:
     build:
       context: .
       dockerfile: extra/cache/Dockerfile
-      #args:
-      #  MODE: prod
+      args:
+        MODE: prod
     ports:
       - 11211
 
@@ -27,8 +27,8 @@ services:
     build:
       context: .
       dockerfile: extra/hhvm/Dockerfile
-      #args:
-      #  MODE: prod
+      args:
+        MODE: prod
     depends_on:
       - mysql
       - cache
@@ -40,8 +40,8 @@ services:
     build:
       context: .
       dockerfile: extra/nginx/Dockerfile
-      #args:
-      #  MODE: prod
+      args:
+        MODE: prod
     depends_on:
       - hhvm
     ports:
